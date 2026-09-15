@@ -3,29 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabilesh Website</title>
+    <title>Kabilesh Login</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
+            background: linear-gradient(135deg, #050505, #102a43, #0066aa);
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 40px rgba(0, 170, 255, 0.3);
         }
 
         h1 {
-            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .input-box label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #008cff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #00bfff;
+            box-shadow: 0 0 20px #00bfff;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            color: #cceeff;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>THIS IS KABILESH WEBSITE</h1>
+    <div class="login-box">
+
+        <h1>LOGIN</h1>
+
+        <form>
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" placeholder="Enter username">
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" placeholder="Enter password">
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+        </form>
+
+        <p class="message">Welcome to Kabilesh Website</p>
+
+    </div>
 
 </body>
 </html>
